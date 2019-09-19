@@ -14,51 +14,21 @@ public class Opgave5 {
         System.out.println("Please enter how many days ahead you want");
         int futureDay = today + input.nextInt() % 7;
 
+        day = getString(today, day);
+        day2 = getString(futureDay, day2);
+        System.out.println("Today is " + day + " and the future day is " + day2);
+    }
+
+    public static String getString(int today, String day) {
         switch (today) {
-            case 0:
-                day = "sunday";
-                break;
-            case 1:
-                day = "monday";
-                break;
-            case 2:
-                day = "tuesday";
-                break;
-            case 3:
-                day = "wednesday";
-                break;
-            case 4:
-                day = "thursday";
-                break;
-            case 5:
-                day = "friday";
-                break;
-            case 6:
-                day = "saturday";
-                break;
+            case 0: day = "sunday"; break;
+            case 1: day = "monday"; break;
+            case 2: day = "tuesday"; break;
+            case 3: day = "wednesday"; break;
+            case 4: day = "thursday"; break;
+            case 5: day = "friday"; break;
+            case 6: day = "saturday"; break;
         }
-        switch (futureDay) {
-            case 0: day2 = "sunday";
-                break;
-            case 1: day2 = "monday";
-                break;
-            case 2:
-                day2 = "tuesday";
-                break;
-            case 3:
-                day2 = "wednesday";
-                break;
-            case 4:
-                day2 = "thursday";
-                break;
-            case 5:
-                day2 = "friday";
-                break;
-            case 6:
-                day2 = "saturday";
-                break;
-        }
-        System.out.println("Today is " + day + " and the future day is " + day2
-        );
+        return day;
     }
 }
